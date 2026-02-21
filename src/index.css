@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@reference "tailwindcss";
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+  background: linear-gradient(135deg, #2a1a3f 0%, #3d1f3d 100%);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+/* HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* CONTAINER */
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* BUTTONS */
+.btn-primary {
+  @apply px-6 py-3 bg-amber-200 text-gray-900 rounded-lg font-semibold hover:bg-amber-300 transition-colors duration-300;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 border-2 border-amber-200 text-amber-200 rounded-lg font-semibold hover:bg-amber-200/10 transition-colors duration-300;
+}
