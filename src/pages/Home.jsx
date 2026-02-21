@@ -28,7 +28,7 @@ export default function Home() {
   useEffect(()=>{
 
     const API =
-      import.meta.env.VITE_API || "http://localhost:5000";
+      import.meta.env.VITE_API || `${import.meta.env.VITE_API_URL}` || "http://localhost:5000";
 
     fetch(`${API}/api/posts`)
       .then(r=>r.json())

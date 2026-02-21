@@ -23,7 +23,7 @@ const handleSubmit = async e => {
   data.append("text", form.text);
   if(form.file) data.append("media", form.file);
 
-  await fetch("http://localhost:5000/api/posts",{
+  await fetch(`${import.meta.env.VITE_API_URL}/api/posts`,{
     method:"POST",
     body:data
   });
