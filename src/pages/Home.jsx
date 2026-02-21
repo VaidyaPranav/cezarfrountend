@@ -28,9 +28,9 @@ export default function Home() {
   useEffect(()=>{
 
     const API =
-      import.meta.env.VITE_API || `${import.meta.env.VITE_API_URL}` || "http://localhost:5000";
+      import.meta.env.VITE_API ;
 
-    fetch(`${API}/api/posts`)
+    fetch(`${import.meta.env.VITE_API_URL}api/posts`)
       .then(r=>r.json())
       .then(data=>{
         if(!Array.isArray(data)) return;

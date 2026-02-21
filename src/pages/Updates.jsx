@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-const API = `${import.meta.env.VITE_API_URL}` || "http://localhost:5000";
+const API = `${import.meta.env.VITE_API_URL}`;
 
 export default function Updates(){
 
   const [posts,setPosts]=useState([]);
 
   useEffect(()=>{
-    fetch(`${API}/api/posts`)
+    fetch(`${import.meta.env.VITE_API_URL}api/posts`)
       .then(r=>r.json())
       .then(setPosts);
   },[]);

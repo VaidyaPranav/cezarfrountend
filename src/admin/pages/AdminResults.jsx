@@ -5,7 +5,7 @@ export default function AdminResults(){
   const [events,setEvents]=useState([]);
 
   const load=()=>{
-    fetch(`${import.meta.env.VITE_API_URL}/api/events`)
+    fetch(`${import.meta.env.VITE_API_URL}api/events`)
       .then(r=>r.json())
       .then(setEvents);
   };
@@ -35,7 +35,7 @@ export default function AdminResults(){
     );
 
     /* save backend */
-    await fetch(`${import.meta.env.VITE_API_URL}/api/events/${id}`,{
+    await fetch(`${import.meta.env.VITE_API_URL}api/events/${id}`,{
       method:"PUT",
       headers:{ "Content-Type":"application/json" },
       body:JSON.stringify({

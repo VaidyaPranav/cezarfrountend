@@ -5,7 +5,7 @@ export default function AdminMessages(){
   const [messages,setMessages]=useState([]);
 
   useEffect(()=>{
-    fetch(`${import.meta.env.VITE_API_URL}/api/messages`)
+    fetch(`${import.meta.env.VITE_API_URL}api/messages`)
       .then(r=>r.json())
       .then(setMessages);
   },[]);

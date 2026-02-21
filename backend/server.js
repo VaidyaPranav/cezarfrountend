@@ -8,6 +8,8 @@ import { fileURLToPath } from "url";
 import adminRoutes from "./routes/adminRoutes.js";
 import eventRoutes from "./routes/eventRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
+import messageRoutes from "./routes/messageRoutes.js";
+import Registration from "./routes/registrationRoutes.js";  
 
 dotenv.config();
 
@@ -51,6 +53,8 @@ app.get("/", (req,res)=>{
 app.use("/api/events", eventRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/messages", messageRoutes);
+app.use("/api/registrations", Registration);
 
 /* ============================= */
 /* SERVER */
