@@ -7,7 +7,7 @@ export default function Updates(){
   const [posts,setPosts]=useState([]);
 
   useEffect(()=>{
-    fetch(`${import.meta.env.VITE_API_URL}api/posts`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/posts`)
       .then(r=>r.json())
       .then(setPosts);
   },[]);

@@ -8,7 +8,7 @@ export default function AdminEvents(){
 
   /* LOAD EVENTS */
   const load=()=>{
-    fetch(`${import.meta.env.VITE_API_URL}api/events`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/events`)
       .then(r=>r.json())
       .then(setEvents);
   };
@@ -19,7 +19,7 @@ export default function AdminEvents(){
   const remove=async(id)=>{
     if(!confirm("Delete event?")) return;
 
-    await fetch(`${import.meta.env.VITE_API_URL}api/events/${id}`,{
+    await fetch(`${import.meta.env.VITE_API_URL}/api/events/${id}`,{
       method:"DELETE"
     });
 
