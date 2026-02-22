@@ -30,7 +30,7 @@ export default function AdminLogin(){
       localStorage.setItem("adminToken", data.token);
 
       // redirect
-      window.location="/admin/dashboard";
+      navigate("/admin/dashboard")
 
     }catch(err){
       console.error(err);
