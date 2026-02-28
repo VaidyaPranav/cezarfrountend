@@ -132,9 +132,7 @@ export default function Home() {
                       </p>
                     </div>
 
-                    <button className="text-sm sm:text-base underline mt-4 hover:text-white transition">
-                      See more →
-                    </button>
+                   
 
                   </div>
                 </div>

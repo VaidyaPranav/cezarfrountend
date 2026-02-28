@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-blue-800 to-black text-white">
+    <footer className="bg-gradient-to-b from-gray-800 via-purple-900 to-blue-900 text-white">
       <div className="container-custom py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* About */}
@@ -21,7 +21,7 @@ export default function Footer() {
             <h3 className="font-poppins font-bold text-amber-300 mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="font-inter text-sm text-gray-300 hover:text-amber-300 transition-colors">
+                <Link to="/home" className="font-inter text-sm text-gray-300 hover:text-amber-300 transition-colors">
                   Home
                 </Link>
               </li>
