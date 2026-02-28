@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="font-poppins font-bold  text-amber-300 pt-5 mb-4">Fest 2025</h3>
+            <h3 className="font-poppins font-bold  text-amber-300 pt-5 mb-4">CEZAR 2026</h3>
             <p className="font-inter text-sm text-gray-300 leading-relaxed pt-2">
               Three days of celebration, competition, and creativity showcasing the best talent
               from our college community.
@@ -45,7 +45,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-poppins font-bold text-amber-300 mb-4">Contact</h3>
+            <h3 className=" pt-5 font-poppins font-bold text-amber-300 mb-4">Contact</h3>
             <ul className="space-y-2 text-sm font-inter text-gray-300">
               <li>Email: fest@college.edu</li>
               <li>Phone: +91 98765 43210</li>
@@ -55,7 +55,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="font-poppins font-bold text-amber-300 mb-4">Follow Us</h3>
+            <h3 className=" pt-5 font-poppins font-bold text-amber-300 mb-4">Follow Us</h3>
             <div className="flex gap-4">
               <a href="#" className="text-gray-300 hover:text-amber-300 transition-colors">
                 Facebook
