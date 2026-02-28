@@ -26,14 +26,14 @@ export default function Navbar() {
       <div className="container-custom">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img src="/cz.png" alt="CEZAR" className="w-12 h-12 rounded-lg" />
-            <span className="font-poppins font-bold text-xl text-amber-300 hidden sm:inline">
-              Fest
-            </span>
-          </Link>
+                <Link to="/" className="flex items-center gap-2">
+                <img src="/cz.png" alt="CEZAR" className="w-12 h-12 rounded-lg" />
+                <span className="font-poppins font-black text-2xl bg-gradient-to-r from-amber-300 to-amber-100 bg-clip-text text-transparent hidden sm:inline tracking-wider drop-shadow-lg">
+                  CEZAR
+                </span>
+                </Link>
 
-          {/* Desktop Navigation */}
+                {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8">
             {navLinks.map((link) => (
               <Link
