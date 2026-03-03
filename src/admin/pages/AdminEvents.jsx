@@ -48,7 +48,7 @@ export default function AdminEvents(){
       teams:form.teams?.split(",").map(t=>t.trim())
     };
 
-    await fetch(`${import.meta.env.VITE_API_URL}api/events/${editing}`,{
+    await fetch(`${import.meta.env.VITE_API_URL}/api/events/${editing}`,{
       method:"PUT",
       headers:{ "Content-Type":"application/json" },
       body:JSON.stringify(payload)
@@ -72,7 +72,7 @@ export default function AdminEvents(){
       runnerPoints:3
     };
 
-    await fetch(`${import.meta.env.VITE_API_URL}api/events`,{
+    await fetch(`${import.meta.env.VITE_API_URL}/api/events`,{
       method:"POST",
       headers:{ "Content-Type":"application/json" },
       body:JSON.stringify(newEvent)
