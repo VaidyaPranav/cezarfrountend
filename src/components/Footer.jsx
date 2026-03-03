@@ -47,9 +47,8 @@ export default function Footer() {
           <div>
             <h3 className=" pt-5 font-poppins font-bold text-amber-300 mb-4">Contact</h3>
             <ul className="space-y-2 text-sm font-inter text-gray-300">
-              <li>Email: fest@college.edu</li>
-              <li>Phone: +91 98765 43210</li>
-              <li>Address: College Campus</li>
+              <li>Email: cezar2k26@gmail.com</li>
+              <li>Address: JNTUHUCEJ(Nachupally) College Campus</li>
             </ul>
           </div>
 
@@ -57,22 +56,18 @@ export default function Footer() {
           <div>
             <h3 className=" pt-5 font-poppins font-bold text-amber-300 mb-4">Follow Us</h3>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-300 hover:text-amber-300 transition-colors">
-                Facebook
-              </a>
-              <a href="#" className="text-gray-300 hover:text-amber-300 transition-colors">
+
+              <a href="https://www.instagram.com/cezar_2k26/" className="text-gray-300 hover:text-amber-300 transition-colors">
                 Instagram
               </a>
-              <a href="#" className="text-gray-300 hover:text-amber-300 transition-colors">
-                Twitter
-              </a>
+
             </div>
           </div>
         </div>
 
         <div className="border-t border-purple-light/20 pt-8">
           <p className="text-center font-inter text-sm text-gray-400">
-            &copy; {currentYear} College Fest. All rights reserved.
+            &copy; {currentYear} CEZAR Fest. All rights reserved.
           </p>
         </div>
       </div>

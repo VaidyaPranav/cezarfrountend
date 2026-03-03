@@ -65,7 +65,7 @@ export default function About() {
                              { label: "Mob", value: "A. Manish Kumar (1202) • 7794889437\nD. Siri (1215) • 9347425044" },
                             { label: "Anti-Ragging", value: "D. Kiran (1217) • 9440444196\nDurga Garule (1220) • 7569403445\nB. Saharsha (1210) • 6300644565" },
                             { label: "Food", value: " T. Anil (1258) • 9347936426\nG. Uday Krishna Reddy (1225) • 7386030371\nV. Spurthi (1265) • 7989087119" },
-                           
+                           { label: "Social Media", value: " M. Soumith (1241) • 7780229982\nE. Varun Sandesh (1222) • 8096790660" },
                             { label: "Stalls", value: "A. Thrilok (1204) • 9701642342\nM. Goutham Venkata Sai Krishna (1233) • 8309344986" },
                         ].map((coord, idx) => (
                             <div key={idx} className="bg-white/5 rounded-lg p-4 sm:p-5 border border-white/10 hover:border-purple-400/30 transition">
