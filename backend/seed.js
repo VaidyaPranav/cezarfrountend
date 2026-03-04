@@ -259,7 +259,7 @@ const events = [
   },
   {
     id: 19,
-    title: "Cricket Tournament",
+    title: "Cricket Tournament Boys",
     category: "Sports",
     image: "/cricket.png",
     description: "Compete in this exciting cricket tournament with teams of 11 players each",
@@ -443,6 +443,23 @@ const events = [
     description: "Compete in this exciting kabaddi tournament with teams of 2 players each",
     rules: ["2 teams", "Tournament format"],
     venue: "kabaddi court",
+    timing: "10:00 AM - 5:00 PM",
+    date: "March 8-9, 2025",
+    teams: ["CSE","ECE","EEE","MECH","MTECH","IT"],
+    winnerPoints:5,
+    runnerPoints:3,
+
+    winner:null,
+    runner:null
+  },
+    {
+    id: 31,
+    title: "Cricket Tournament girls",
+    category: "Sports",
+    image: "/cricket.png",
+    description: "Compete in this exciting cricket tournament with teams of 11 players each",
+    rules: ["Team of 11 players", "3 rounds per match", "Tournament format"],
+    venue: "cricket ground",
     timing: "10:00 AM - 5:00 PM",
     date: "March 8-9, 2025",
     teams: ["CSE","ECE","EEE","MECH","MTECH","IT"],
