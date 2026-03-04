@@ -55,18 +55,19 @@ export default function About() {
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10">Student Coordinators</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                         {[
-                            { label: "Main Coordinators", value: "D. Sai Shankar (1216) • 9618341983 \nD. Sahithi (1218) • 8886703567" },
-                            { label: "Finance", value: "Mohammed Ubaiduddin (1240) • 7989447767\nCh. Shravya (1214) • 9182736304" },
-                            { label: "Technical Team", value: "Anayat Ahmad Bhat (1267) • 6005843877\nV. Pranav (1261) • 9652871322\nR. Dhanalaxmi (12LE5) • 7569207359\nPriya Kumari (12LE4) • 7993527492" },
-                            { label: "Non-Technical Team", value: "B. Sai Teja (1211) • 9392116521\nMD Nasheeroddin (1239) • 8712574204\nM. Ashwitha (1238) • 8106333718\nM. Thirumala (1235) • 9392298221" },
-                            { label: "Arts", value: "Ch. Aryan (1213) • 9032527114\nA. Indu (1206) • 9848575703\nV. Vyshnavi (1262) • 9550284714" },
-                            { label: "Discipline", value: "N. Venkatesh (1244) • 9542098264\nB. Navadeep (1212) • 8523051019\nK. Vaishnavi (1230) • 9347348449\nR. Mahalaxmi (1251) • 9908472040" },
-                            { label: "Sports", value: "U. Ajay (1260) • 9063973641\nS. Sri Datta (1253) • 9014296859\nP. Priyanka (1247) • 9849004538" },
-                             { label: "Mob", value: "A. Manish Kumar (1202) • 7794889437\nD. Siri (1215) • 9347425044" },
-                            { label: "Anti-Ragging", value: "D. Kiran (1217) • 9440444196\nDurga Garule (1220) • 7569403445\nB. Saharsha (1210) • 6300644565" },
-                            { label: "Food", value: " T. Anil (1258) • 9347936426\nG. Uday Krishna Reddy (1225) • 7386030371\nV. Spurthi (1265) • 7989087119" },
-                           { label: "Social Media", value: " M. Soumith (1241) • 7780229982\nE. Varun Sandesh (1222) • 8096790660" },
-                            { label: "Stalls", value: "A. Thrilok (1204) • 9701642342\nM. Goutham Venkata Sai Krishna (1233) • 8309344986" },
+                            { label: "Main Coordinators", value: "D. Sai Shankar  • 9618341983 \nD. Sahithi  • 8886703567" },
+                            { label: "Finance", value: "Mohammed Ubaiduddin  • 7989447767\nCh. Shravya  • 9182736304" },
+                            { label: "Technical Team", value: "Anayat Ahmad Bhat  • 6005843877\nV. Pranav • 9652871322\nR. Dhanalaxmi • 7569207359\nPriya Kumari • 7993527492" },
+                            { label: "Non-Technical Team", value: "B. Sai Teja • 9392116521\nMD Nasheeroddin • 8712574204\nM. Ashwitha • 8106333718\nM. Thirumala • 9392298221" },
+                            { label: "Arts", value: "Ch. Aryan • 9032527114\nA. Indu • 9848575703\nV. Vyshnavi • 9550284714" },
+                            { label: "Discipline", value: "N. Venkatesh • 9542098264\nB. Navadeep • 8523051019\nK. Vaishnavi • 9347348449\nR. Mahalaxmi • 9908472040" },
+                            { label: "Sports", value: "U. Ajay • 9063973641\nS. Sri Datta • 9014296859\nP. Priyanka • 9849004538" },
+                            { label: "Mob", value: "A. Manish Kumar • 7794889437\nD. Siri • 9347425044" },
+                            { label: "Cult Night", value: " T. Ramesh • 8309287379\nN. Akhila • 9652013657" },
+                            { label: "Anti-Ragging", value: "D. Kiran • 9440444196\nDurga Garule • 7569403445\nB. Saharsha • 6300644565" },
+                            { label: "Food", value: " T. Anil • 9347936426\nG. Uday Krishna Reddy • 7386030371\nV. Spurthi • 7989087119" },
+                           { label: "Social Media", value: " M. Soumith • 7780229982\nE. Varun Sandesh • 8096790660" },
+                            { label: "Stalls", value: "A. Thrilok • 9701642342\nM. Goutham Venkata Sai Krishna • 8309344986" },
                         ].map((coord, idx) => (
                             <div key={idx} className="bg-white/5 rounded-lg p-4 sm:p-5 border border-white/10 hover:border-purple-400/30 transition">
                                 <p className="text-purple-300 font-bold text-sm sm:text-base mb-3">{coord.label}</p>

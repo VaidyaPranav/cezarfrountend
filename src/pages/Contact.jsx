@@ -158,38 +158,15 @@ export default function Contact() {
                     </h3>
                     <p className="font-inter text-amber-300 text-sm sm:text-base">
                       <a href="mailto:info@fest.com" className="hover:text-amber-200 transition break-all">
-                        info@fest.com
+                        cezar2k26@gmail.com
                       </a>
                     </p>
-                    <p className="font-inter text-amber-300 text-sm sm:text-base">
-                      <a href="mailto:support@fest.com" className="hover:text-amber-200 transition break-all">
-                        support@fest.com
-                      </a>
-                    </p>
+                    
                   </div>
                 </div>
               </div>
 
-              <div className="bg-purple-light/20 rounded-xl p-4 sm:p-6 border border-purple-light/30">
-                <div className="flex items-start gap-3 sm:gap-4">
-                  <span className="text-2xl sm:text-3xl">📞</span>
-                  <div>
-                    <h3 className="font-poppins font-bold text-white text-base sm:text-lg mb-2 sm:mb-3">
-                      Phone
-                    </h3>
-                    <p className="font-inter text-amber-300 text-sm sm:text-base">
-                      <a href="tel:+919876543210" className="hover:text-amber-200 transition">
-                        +91 9876 543 210
-                      </a>
-                    </p>
-                    <p className="font-inter text-amber-300 text-sm sm:text-base">
-                      <a href="tel:+919876543211" className="hover:text-amber-200 transition">
-                        +91 9876 543 211
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
