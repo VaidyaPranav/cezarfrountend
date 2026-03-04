@@ -11,8 +11,9 @@ export default function About() {
                         className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-2xl sm:rounded-3xl object-cover border-4 border-purple-400 shrink-0"
                     />
                     <div className="text-center sm:text-left">
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Dr. S. Suresh Kumar</h2>
-                        <p className="text-purple-300 font-semibold mt-2 text-lg sm:text-xl">Head of Department (IT)</p>
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Dr.S.Suresh Kumar</h2>
+                        <p className="text-purple-300 font-semibold mt-2 text-lg sm:text-xl"> Associate Professor</p>
+                        <p className="text-purple-300 font-semibold mt-2 text-lg sm:text-xl"> Head of Department (IT)</p>
                         <p className="mt-4 text-gray-200 text-sm sm:text-base lg:text-lg leading-relaxed">
                             Convenor and Head of the Department of Information Technology
                         </p>
@@ -37,20 +38,29 @@ export default function About() {
                 </section>
 
                 {/* FACULTY TEAM */}
-                <section>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 lg:mb-10 text-center">Faculty Coordinators</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                        {[1, 2, 3].map((i) => (
-                            <div key={i} className="bg-white/10 backdrop-blur-md shadow-lg rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center border border-white/20 hover:border-purple-400/50 transition">
-                                <img src={`/faculty${i}.jpg`} alt={`Faculty ${i}`} className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 object-cover border-4 border-purple-400"/>
-                                <h3 className="font-semibold text-lg sm:text-xl">Faculty Name</h3>
-                                <p className="text-gray-300 text-sm mt-2">Role / Responsibility</p>
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                                <section className="bg-white/10 backdrop-blur-md shadow-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/20">
+                                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10">Faculty Coordinators</h2>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                                        {[
+                                            { name: "Mr. B. Rajesh", role: "Assistant Professor(C), Department of IT", responsibility: "Event Coordination", image: "rajesh .jpg" },
+                                            { name: "Mr. T. Rajashekar", role: "Assistant Professor(C), Department of IT", responsibility: "Technical Support", image: "rajashekar.jpeg" },
+                                            { name: "Mr. B. Madhukar", role: "Assistant Professor(C), Department of IT", responsibility: "Logistics", image: "madhukar sir.jpg" },
+                                            { name: "Mr. S. Shashikanth", role: "Assistant Professor(C), Department of IT", responsibility: "Finance", image: "shashikanthsir.jpg" },
+                                            { name: "Mr. S. Kumara Swamy", role: "Assistant Professor(C), Department of IT", responsibility: "Operations", image: "kumarsir.jpg" },
+                                            { name: "Miss. D. Latha", role: "Assistant Professor(C), Department of IT", responsibility: "Student Relations", image: "latha mam.jpg" },
+                                            { name: "Miss. Samreen Sulthana", role: "Assistant Professor(C), Department of IT", responsibility: "Judging Panel", image: "samreen mam.jpg" },
+                                        ].map((faculty, idx) => (
+                                            <div key={idx} className="bg-white/5 rounded-lg p-4 sm:p-5 border border-white/10 hover:border-purple-400/30 transition text-center">
+                                                <img src={faculty.image} alt={faculty.name} className="w-24 h-27 sm:w-32 sm:h-37 rounded-2xl mx-auto mb-4 object-cover border-4 border-purple-400"/>
+                                                <h3 className="font-semibold text-lg sm:text-xl text-white">{faculty.name}</h3>
+                                                <p className="text-gray-300 text-xs sm:text-sm mt-2">{faculty.role}</p>
+                                                <p className="text-purple-300 font-bold text-xs sm:text-sm mt-3">{faculty.responsibility}</p>
+                                            </div>
+                                        ))} 
+                                    </div>
+                                </section>
 
-                {/* COORDINATORS */}
+                                {/* COORDINATORS */}
                 <section className="bg-white/10 backdrop-blur-md shadow-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/20">
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10">Student Coordinators</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">

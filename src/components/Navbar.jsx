@@ -29,7 +29,7 @@ export default function Navbar() {
           <Link to="/" className="flex items-center gap-2">
             <img src="/cz.png" alt="CEZAR" className="w-12 h-12 rounded-lg" />
             <span className="font-poppins font-black text-xl sm:text-2xl bg-gradient-to-r from-amber-300 to-amber-100 bg-clip-text text-transparent inline sm:inline tracking-wider drop-shadow-lg">
-              CEZAR
+              CEZAR 2026
             </span>
           </Link>
 

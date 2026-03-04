@@ -111,7 +111,7 @@ export default function AdminResults(){
                   });
 
                 }}
-                className="block text-black mb-2 p-2 rounded w-64"
+                className="block text-white mb-2 p-2 rounded w-64"
               >
                 <option value="">Select winner</option>
                 {e.teams.map(t=>
@@ -157,7 +157,7 @@ export default function AdminResults(){
                 });
 
               }}
-              className="block text-black mb-2 p-2 rounded w-64"
+              className="block text-white mb-2 p-2 rounded w-64"
             >
               <option value="">Opponent</option>
               {e.teams.map(t=>
@@ -197,7 +197,7 @@ export default function AdminResults(){
                 });
 
               }}
-              className="block text-black mb-2 p-2 rounded w-64"
+              className="block text-white mb-2 p-2 rounded w-64"
             >
               <option value="">Opponent</option>
               {e.teams.map(t=>
@@ -227,7 +227,7 @@ export default function AdminResults(){
                 });
 
               }}
-              className="block text-black mb-2 p-2 rounded w-64"
+              className="block text-white mb-2 p-2 rounded w-64"
             >
               <option value="">Final Team 1</option>
               {e.teams.map(t=>
@@ -247,7 +247,7 @@ export default function AdminResults(){
                 });
 
               }}
-              className="block text-black mb-2 p-2 rounded w-64"
+              className="block text-white mb-2 p-2 rounded w-64"
             >
               <option value="">Final Team 2</option>
               {e.teams.map(t=>
@@ -280,7 +280,7 @@ export default function AdminResults(){
                 });
 
               }}
-              className="block text-black mb-2 p-2 rounded w-64"
+              className="block text-white mb-2 p-2 rounded w-64"
             >
               <option value="">Select Champion</option>
 
