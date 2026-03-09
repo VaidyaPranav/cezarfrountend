@@ -41,8 +41,10 @@ export default function About() {
                                 <section className="bg-white/10 backdrop-blur-md shadow-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/20">
                                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10">Faculty Coordinators</h2>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                                        {[  { name: "Miss. Samreen Sulthana", role: "Assistant Professor(C), Department of IT", responsibility: " faculty Co-Ordinator", image: "samreen mam.jpg" },
-                                            { name: "Mr. S. Shashikanth", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Cultural Event", image: "shashikanthsir.jpg" },
+
+                                        {[  { name: "Mr. S. Shashikanth", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Cultural Event", image: "shashikanthsir.jpg" },
+                                            { name: "Miss. Samreen Sulthana", role: "Assistant Professor(C), Department of IT", responsibility: " faculty Co-Ordinator", image: "samreen mam.jpg" },
+                                            
                                             { name: "Mr. S. Kumara Swamy", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Discipline", image: "kumarsir.jpg" },
                                             { name: "Mr. B. Rajesh", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Technical Event", image: "rajesh .jpg" },
                                             { name: "Mr. T. Rajashekar", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Finance", image: "rajashekar.jpeg" },
