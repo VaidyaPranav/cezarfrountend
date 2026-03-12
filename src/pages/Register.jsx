@@ -153,10 +153,7 @@ export default function Register() {
             >
               <option value="">Choose Category</option>
               <option value="Technical">Technical</option>
-              <option value="Non-Technical">Non-Technical</option>
-              <option value="Flash Mob">Flash Mob</option>
-              <option value="Sports">Sports</option>
-              <option value="Cult Night">Cult Night</option>
+
             </select>
 
             {/* TEAM */}

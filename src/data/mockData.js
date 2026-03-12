@@ -24,7 +24,7 @@ export const eventsData = [
   },
   {
     id: 3,
-    title: "Code-a-thon",
+    title: "Code-arena",
     category: "Technical",
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&h=300&fit=crop",
     description: "Showcase your coding skills in this competitive programming event",
@@ -46,7 +46,7 @@ export const eventsData = [
   },
   {
     id: 5,
-    title: "Vishleshan",
+    title: "Idea wave",
     category: "Technical",
     image: "/ppt.jpeg",
     description: "PPT is a powerful, easy to use presentation graphics but allows to create professional looking slide shows",
@@ -443,6 +443,39 @@ export const eventsData = [
 
     winner:null,
     runner:null
+  },
+  {
+    id: 31,
+    title: "Aptitude Test",
+    category: "Technical",
+    image: "/aptitude.jpeg",
+    description: "PPT is a powerful, easy to use presentation graphics but allows to create professional looking slide shows",
+    rules: ["Max 5 submissions", "JPEG/PNG format", "Max 5MB per image"],
+    venue: "Online",
+    timing: "Till March 10, 2025",
+    date: "March 5-10, 2025"
+  },
+   {
+    id: 32,
+    title: "Fortune Trivia",
+    category: "Technical",
+    image: "/trivya.jpeg",
+    description: "PPT is a powerful, easy to use presentation graphics but allows to create professional looking slide shows",
+    rules: ["Max 5 submissions", "JPEG/PNG format", "Max 5MB per image"],
+    venue: "Online",
+    timing: "Till March 10, 2025",
+    date: "March 5-10, 2025"
+  },
+   {
+    id: 33,
+    title: "3hrs Challange",
+    category: "Technical",
+    image: "/3hrs.jpeg",
+    description: "PPT is a powerful, easy to use presentation graphics but allows to create professional looking slide shows",
+    rules: ["Max 5 submissions", "JPEG/PNG format", "Max 5MB per image"],
+    venue: "Online",
+    timing: "Till March 10, 2025",
+    date: "March 5-10, 2025"
   }
 ];
 
