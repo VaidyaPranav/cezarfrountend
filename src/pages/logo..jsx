@@ -4,21 +4,7 @@ export default function About() {
             <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8 lg:space-y-12">
 
                 {/* HOD SECTION */}
-                <section className="bg-white/10 backdrop-blur-md shadow-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 flex flex-col sm:flex-row items-center gap-6 sm:gap-8 border border-white/20">
-                    <img
-                        src="/hod.png"
-                        alt="Dr. S.Suresh Kumar - Head of Department"
-                        className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-2xl sm:rounded-3xl object-cover border-4 border-purple-400 shrink-0"
-                    />
-                    <div className="text-center sm:text-left">
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Dr.S.Suresh Kumar</h2>
-                        <p className="text-purple-300 font-semibold mt-2 text-lg sm:text-xl"> Associate Professor</p>
-                        <p className="text-purple-300 font-semibold mt-2 text-lg sm:text-xl"> Head of Department (IT)</p>
-                        <p className="mt-4 text-gray-200 text-sm sm:text-base lg:text-lg leading-relaxed">
-                            Convenor and Head of the Department of Information Technology
-                        </p>
-                    </div>
-                </section>
+
 
                 {/* ABOUT FEST */}
                 <section className="bg-white/10 backdrop-blur-md shadow-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/20">
@@ -37,17 +23,33 @@ export default function About() {
                     </div>
                 </section>
 
+                <section className="bg-white/10 backdrop-blur-md shadow-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 flex flex-col sm:flex-row items-center gap-6 sm:gap-8 border border-white/20">
+                    <img
+                        src="/hod.png"
+                        alt="Dr. S.Suresh Kumar - Head of Department"
+                        className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-2xl sm:rounded-3xl object-cover border-4 border-purple-400 shrink-0"
+                    />
+                    <div className="text-center sm:text-left">
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Dr.S.Suresh Kumar</h2>
+                        <p className="text-purple-300 font-semibold mt-2 text-lg sm:text-xl"> Associate Professor</p>
+                        <p className="text-purple-300 font-semibold mt-2 text-lg sm:text-xl"> Head of Department (IT)</p>
+                        <p className="mt-4 text-gray-200 text-sm sm:text-base lg:text-lg leading-relaxed">
+                            Convenor and Head of the Department of Information Technology
+                        </p>
+                    </div>
+                </section>
+
                 {/* FACULTY TEAM */}
                                 <section className="bg-white/10 backdrop-blur-md shadow-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/20">
-                                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10">Faculty Coordinators</h2>
+                                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10">Faculty</h2>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 
-                                        {[  { name: "Mr. S. Shashikanth", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Cultural Event", image: "shashikanthsir.jpg" },
-                                            { name: "Miss. Samreen Sulthana", role: "Assistant Professor(C), Department of IT", responsibility: " faculty Co-Ordinator", image: "samreen mam.jpg" },
-                                            
-                                            { name: "Mr. S. Kumara Swamy", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Discipline", image: "kumarsir.jpg" },
+                                        {[  { name: "Mr. S. Shashikanth", role: "Assistant Professor(C), Department of IT", responsibility: "Faculty Co-Ordinator", image: "shashikanthsir.jpg" },
+                                            { name: "Miss. Samreen Sulthana", role: "Assistant Professor(C), Department of IT", responsibility: " Faculty Co-Ordinator", image: "samreen mam.jpg" },
                                             { name: "Mr. B. Rajesh", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Technical Event", image: "rajesh .jpg" },
                                             { name: "Mr. T. Rajashekar", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Finance", image: "rajashekar.jpeg" },
+                                            { name: "Mr. S. Kumara Swamy", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Discipline", image: "kumarsir.jpg" },
+
                                             { name: "Mr. B. Madhukar", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Web Designing and Printing", image: "madhukar sir.jpg" },
                                            
                                             { name: "Miss. D. Latha", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Arts", image: "latha mam.jpg" },

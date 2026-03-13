@@ -468,6 +468,40 @@ const events = [
 
     winner:null,
     runner:null
+  },
+  
+  {
+    id: 32,
+    title: "Aptitude Test",
+    category: "Technical",
+    image: "/aptitude.jpeg",
+    description: "PPT is a powerful, easy to use presentation graphics but allows to create professional looking slide shows",
+    rules: ["Max 5 submissions", "JPEG/PNG format", "Max 5MB per image"],
+    venue: "Online",
+    timing: "Till March 10, 2025",
+    date: "March 5-10, 2025"
+  },
+   {
+    id: 33,
+    title: "Fortune Trivia",
+    category: "Technical",
+    image: "/trivya.jpeg",
+    description: "PPT is a powerful, easy to use presentation graphics but allows to create professional looking slide shows",
+    rules: ["Max 5 submissions", "JPEG/PNG format", "Max 5MB per image"],
+    venue: "Online",
+    timing: "Till March 10, 2025",
+    date: "March 5-10, 2025"
+  },
+   {
+    id: 34,
+    title: "3hrs Challange",
+    category: "Technical",
+    image: "/3hrs.jpeg",
+    description: "PPT is a powerful, easy to use presentation graphics but allows to create professional looking slide shows",
+    rules: ["Max 5 submissions", "JPEG/PNG format", "Max 5MB per image"],
+    venue: "Online",
+    timing: "Till March 10, 2025",
+    date: "March 5-10, 2025"
   }
 ];
 
