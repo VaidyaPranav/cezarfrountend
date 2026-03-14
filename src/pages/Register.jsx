@@ -134,7 +134,7 @@ export default function Register() {
               <option value="">Choose Event</option>
 
               {eventsData
-                .filter(e => ["Technical","Non-Technical"].includes(e.category))
+                .filter(e => ["Technical"].includes(e.category))
                 .map(e => (
                   <option key={e.id} value={e.title}>
                     {e.title}
@@ -153,7 +153,7 @@ export default function Register() {
             >
               <option value="">Choose Category</option>
               <option value="Technical">Technical</option>
-
+              
             </select>
 
             {/* TEAM */}
@@ -162,7 +162,7 @@ export default function Register() {
               name="teamName"
               value={formData.teamName}
               onChange={handleChange}
-              placeholder="Team Name"
+              placeholder="Team lead name (optional for single participant events)"
               className="w-full px-4 py-3 rounded-lg bg-dark-purple/50 border border-purple-light/30"
             />
 
@@ -170,7 +170,7 @@ export default function Register() {
               name="teamMembers"
               value={formData.teamMembers}
               onChange={handleChange}
-              placeholder="Team Members"
+              placeholder="Team Members names, optional for single participant events"
               rows="3"
               className="w-full px-4 py-3 rounded-lg bg-dark-purple/50 border border-purple-light/30"
             />
@@ -181,6 +181,8 @@ export default function Register() {
             >
               Register Now
             </button>
+
+            <p>Please make sure you have read the entry fee details before registering.</p>
 
           </form>
 

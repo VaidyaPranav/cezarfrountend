@@ -135,24 +135,7 @@ export default function EventDetails() {
               )}
 
               {/* RULES FOR NON-SPORTS */}
-              {event.category !== "Sports" && (
-                <div className="mb-12">
-
-                  <h2 className="font-poppins font-bold text-2xl sm:text-3xl mb-6">
-                    Rules & Guidelines
-                  </h2>
-
-                  <ul className="space-y-3">
-                    {event.rules?.map((rule, index) => (
-                      <li key={index} className="font-inter text-gray-300 flex gap-3">
-                        <span className="text-amber-300 font-bold">✓</span>
-                        <span>{rule}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                </div>
-              )}
+             
 
             </div>
 
