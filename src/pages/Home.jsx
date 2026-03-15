@@ -49,7 +49,6 @@ export default function Home() {
   return(
     <div className="bg-linear-to-b from-gray-800 via-purple-900 to-blue-900 text-white min-h-screen">
 
-      {/* HERO */}
       <section className="px-4 sm:px-6 md:px-8 py-16 sm:py-24 md:py-32 mb-8 sm:mb-12 md:mb-16">
         <div className="max-w-2xl mx-auto text-center space-y-6 pt-10 sm:pt-16 md:pt-20">
           <h1 className="font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
@@ -67,41 +66,82 @@ export default function Home() {
               Explore Events
             </Link>
           </div>
-        </div>
-        <div className="max-w-3xl mx-auto pt-5 sm:pt-10">
 
+          {/* Sponsors Section */}
+          <section className="bg-white/10 backdrop-blur-md shadow-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/20 mt-8">
+            <div className="max-w-5xl mx-auto px-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-10">
+                Our Sponsors
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-center">
+                {/* Sponsor 1 */}
+                <div className="flex flex-col items-center group">
+                  <div className="bg-linear-to-br from-cyan-400 via-blue-500 to-purple-600 p-1 rounded-full shadow-lg transition-all group-hover:scale-105 group-hover:shadow-2xl">
+                    <a href="https://clyraoverseas.com" target="_blank" rel="noopener noreferrer">
+                      <img 
+                        src="/clyra.jpeg"
+                        alt="Sponsor 1"
+                        className="h-20 w-20 object-contain rounded-full border-4 border-white shadow-md transition-transform group-hover:scale-110"
+                      />
+                    </a>
+                  </div>
+                  <span className="mt-3 text-sm font-semibold text-white/80 tracking-wide group-hover:text-amber-400 transition">Clyra</span>
+                </div>
+                {/* Sponsor 2 */}
+                <div className="flex flex-col items-center group">
+                  <div className="bg-linear-to-br from-yellow-300 via-orange-400 to-pink-500 p-1 rounded-xl shadow-lg transition-all group-hover:scale-105 group-hover:shadow-2xl">
+                    <a href="https://www.rohelatech.com/" target="_blank" rel="noopener noreferrer">
+                      <img 
+                        src="/rohelatech.png"
+                        alt="Sponsor 2"
+                        className="h-20 w-32 object-contain rounded-xl border-4 border-white shadow-md transition-transform group-hover:scale-110"
+                      />
+                    </a>
+                  </div>
+                  <span className="mt-3 text-sm font-semibold text-white/80 tracking-wide group-hover:text-amber-400 transition">Rohela Tech</span>
+                </div>
+                {/* Sponsor 3 */}
+                <div className="flex flex-col items-center group">
+                  <div className="bg-linear-to-br from-blue-300 via-indigo-400 to-purple-700 p-1 rounded-full shadow-lg transition-all group-hover:scale-105 group-hover:shadow-2xl">
+                    <a href="https://onlinesbi.sbi.bank.in/" target="_blank" rel="noopener noreferrer">
+                      <img 
+                        src="/sbi.png"
+                        alt="Sponsor 3"
+                        className="h-20 w-20 object-contain rounded-full border-4 border-white shadow-md transition-transform group-hover:scale-110"
+                      />
+                    </a>
+                  </div>
+                  <span className="mt-3 text-sm font-semibold text-white/80 tracking-wide group-hover:text-amber-400 transition">SBI</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div className="max-w-3xl mx-auto pt-5 sm:pt-10">
           <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-8 ">
             Latest Updates
           </h2>
-
           <div className="space-y-4 ">
-
             {latestPosts.length===0 && (
               <div className="text-center text-gray-400">
                 No updates yet
               </div>
             )}
-
             {latestPosts.map(p=>(
               <div key={p._id}
                 className="bg-purple-900/40 border border-white/10 rounded-lg p-4">
-
                 <div className="text-xs text-white/70 mb-1">
                   admin: {p.adminName}
                 </div>
-
                 <div className="text-sm sm:text-base">
                   {p.text}
                 </div>
-
               </div>
             ))}
-
           </div>
-
         </div>
       </section>
-      
       {/* EVENTS CAROUSEL */}
       <section className="py-16 sm:py-20 md:py-28 bg-white/5 sm:px-6 md:px-8">
         <div className="max-w-4xl mx-auto space-y-8">

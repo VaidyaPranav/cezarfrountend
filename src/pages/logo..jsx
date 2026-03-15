@@ -45,14 +45,14 @@ export default function About() {
                                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 
                                         {[  { name: "Mr. S. Shashikanth", role: "Assistant Professor(C), Department of IT", responsibility: "Faculty Co-Ordinator", image: "shashikanthsir.jpg" },
-                                            { name: "Miss. Samreen Sulthana", role: "Assistant Professor(C), Department of IT", responsibility: " Faculty Co-Ordinator", image: "samreen mam.jpg" },
+                                            { name: "Mrs. Samreen Sulthana", role: "Assistant Professor(C), Department of IT", responsibility: " Faculty Co-Ordinator", image: "samreen mam.jpg" },
                                             { name: "Mr. B. Rajesh", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Technical Event", image: "rajesh .jpg" },
                                             { name: "Mr. T. Rajashekar", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Finance", image: "rajashekar.jpeg" },
                                             { name: "Mr. S. Kumara Swamy", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Discipline", image: "kumarsir.jpg" },
 
                                             { name: "Mr. B. Madhukar", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Web Designing and Printing", image: "madhukar sir.jpg" },
                                            
-                                            { name: "Miss. D. Latha", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Arts", image: "latha mam.jpg" },
+                                            { name: "Mrs. D. Latha", role: "Assistant Professor(C), Department of IT", responsibility: "Co-Ordinator of Arts", image: "latha mam.jpg" },
                                             
                                         ].map((faculty, idx) => (
                                             <div key={idx} className="bg-white/5 rounded-lg p-4 sm:p-5 border border-white/10 hover:border-purple-400/30 transition text-center">
