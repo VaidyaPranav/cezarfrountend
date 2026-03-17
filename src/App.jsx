@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { EventProvider } from './context/EventContext'; // ✅ ADD THIS
+
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Events from './pages/Events';
@@ -7,6 +9,7 @@ import Register from './pages/Register';
 import Updates from './pages/Updates';
 import Contact from './pages/Contact';
 import Championship from './components/Championship';
+
 import AdminLogin from "./admin/pages/AdminLogin";
 import AdminLayout from "./admin/components/AdminLayout";
 import AdminRoute from "./admin/components/AdminRoute";
@@ -16,45 +19,51 @@ import AdminRegistrations from "./admin/pages/AdminRegistrations";
 import AdminMessages from "./admin/pages/AdminMessages";
 import AdminPosts from './admin/pages/AdminPosts';
 import AdminEvents from './admin/pages/AdminEvents';
-import About from './pages/logo.';
+
+import About from './pages/logo.'; // ⚠️ this looks suspicious
 import './index.css';
 
 function App() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/events/:id" element={<EventDetails />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/updates" element={<Updates />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/championship" element={<Championship />} />
-          <Route path="/admin/login" element={<AdminLogin/>}/>
-          <Route path="/admin/results" element={<AdminResults />} />
-          <Route path="/admin/registrations" element={<AdminRegistrations />} />
-          <Route path="/admin/messages" element={<AdminMessages />} />
-          <Route path="/admin/posts" element={<AdminPosts />} />
-          <Route path="/admin/events" element={<AdminEvents />} />
-          <Route path="/" element={<About />} />
+    <EventProvider> {/* ✅ THIS IS THE MISSING PIECE */}
+      <Router>
+        <Layout>
+          <Routes>
 
+            <Route path="/home" element={<Home />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/events/:id" element={<EventDetails />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/updates" element={<Updates />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/championship" element={<Championship />} />
 
-<Route
-  path="/admin"
-  element={ 
-    <AdminRoute>
-      <AdminLayout/>
-    </AdminRoute>
-  }
->
-  <Route path="dashboard" element={<AdminDashboard/>}/>
-  <Route path="results" element={<AdminResults/>}/>
+            <Route path="/admin/login" element={<AdminLogin/>}/>
+            <Route path="/admin/results" element={<AdminResults />} />
+            <Route path="/admin/registrations" element={<AdminRegistrations />} />
+            <Route path="/admin/messages" element={<AdminMessages />} />
+            <Route path="/admin/posts" element={<AdminPosts />} />
+            <Route path="/admin/events" element={<AdminEvents />} />
 
-</Route>
+            <Route path="/" element={<About />} />
+
+            {/* Nested Admin */}
+            <Route
+              path="/admin"
+              element={ 
+                <AdminRoute>
+                  <AdminLayout/>
+                </AdminRoute>
+              }
+            >
+              <Route path="dashboard" element={<AdminDashboard/>}/>
+              <Route path="results" element={<AdminResults/>}/>
+            </Route>
+
           </Routes>
-      </Layout>
-    </Router>
+        </Layout>
+      </Router>
+    </EventProvider>
   );
 }
 

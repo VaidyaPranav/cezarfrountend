@@ -1,196 +1,203 @@
-import { useState } from 'react';
-import { eventsData } from '../data/mockData';
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { EventContext } from "../context/EventContext";
 
 export default function Register() {
 
+  const { events, loading } = useContext(EventContext);
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
-    name:'',
-    college:'',
-    phone:'',
-    email:'',
-    event:'',
-    eventCategory:'',
-    teamName:'',
-    teamMembers:'',
+    name: "",
+    email: "",
+    phone: "",
+    event: "",
+    eventCategory: "Technical",
+    teamName: "",
+    teamMembers: ""
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [message, setMessage] = useState("");
 
+  // HANDLE INPUT
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
+  // SUBMIT
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!formData.event) {
+      setMessage("Please select an event");
+      return;
+    }
+
     try {
+      setSubmitting(true);
 
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/registrations`,{
-        method:"POST",
-        headers:{ "Content-Type":"application/json" },
-        body: JSON.stringify(formData)
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/registrations`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData) // ✅ EXACT MATCH
       });
 
-      if(!res.ok) throw new Error("Failed");
+      const data = await res.json();
 
-      setSubmitted(true);
+      if (res.ok) {
+        setMessage("✅ Registration successful!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          event: "",
+          eventCategory: "Technical",
+          teamName: "",
+          teamMembers: ""
+        });
+      } else {
+        setMessage(data.message || "❌ Registration failed");
+      }
 
-      setFormData({
-        name:'',
-        college:'',
-        phone:'',
-        email:'',
-        event:'',
-        eventCategory:'',
-        teamName:'',
-        teamMembers:'',
-      });
-
-    } catch(err){
-      alert("Registration failed");
+    } catch (err) {
       console.error(err);
+      setMessage("⚠️ Server error");
+    } finally {
+      setSubmitting(false);
     }
   };
 
+  // LOADING
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 via-purple-900 to-blue-900 text-white">
+        <p className="text-sm animate-pulse">Loading...</p>
+      </div>
+    );
+  }
+
   return (
-    <div className="bg-linear-to-b from-gray-800 via-purple-900 to-blue-900 text-white min-h-screen">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-purple-900 to-blue-900 text-white px-3 py-6 flex justify-center">
 
-      {/* Header */}
-      <section className="bg-linear-to-r from-dark-purple via-dark-maroon to-dark-purple pt-8 pb-8 px-4 border-b border-purple-light/20">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="font-poppins font-bold text-4xl mb-2">
-            Event Registration
-          </h1>
-          <p className="text-gray-300">
-            Fill the form below to register for your favorite events
-          </p>
+      <div className="w-full max-w-md bg-white/5 backdrop-blur-lg rounded-xl p-4 sm:p-6 shadow-lg border border-white/10">
+
+        {/* NAV */}
+        <button
+          onClick={() => navigate("/events")}
+          className="text-xs text-purple-300 mb-3 hover:underline"
+        >
+          ← View Events
+        </button>
+
+        <h1 className="text-xl font-semibold text-center mb-4">
+          Event Registration
+        </h1>
+
+        {/* FEES */}
+        <div className="bg-white/5 border border-white/10 rounded-lg p-3 mb-4 text-xs">
+          <p className="text-amber-300 font-medium mb-1">Entry Fees</p>
+          <div className="flex justify-between">
+            <span>Single</span>
+            <span>₹30</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Group</span>
+            <span>₹100</span>
+          </div>
         </div>
-      </section>
 
-      {/* Form */}
-      <section className="py-12 px-4">
-        <div className="max-w-2xl mx-auto">
+        <form onSubmit={handleSubmit} className="space-y-3">
 
-          {submitted ? (
-            <div className="bg-green-500/20 border-2 border-green-500 rounded-xl p-8 text-center">
-              <h2 className="text-2xl text-green-400 mb-2 font-bold">
-                ✓ Registration Successful!
-              </h2>
-              <p className="text-green-300">
-                Thank you for registering.
-              </p>
-            </div>
-          ) : (
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="w-full p-2.5 text-sm rounded-md bg-white/10 border border-white/20 focus:border-amber-300 outline-none"
+          />
 
-          <form onSubmit={handleSubmit}
-                className="bg-linear-to-br from-purple-light to-dark-maroon rounded-xl shadow-2xl p-8 space-y-6 border border-purple-light/30">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full p-2.5 text-sm rounded-md bg-white/10 border border-white/20 focus:border-amber-300 outline-none"
+          />
 
-            {/* NAME */}
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              placeholder="Full Name and roll no"
-              className="w-full px-4 py-3 rounded-lg bg-dark-purple/50 border border-purple-light/30"
-            />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+            className="w-full p-2.5 text-sm rounded-md bg-white/10 border border-white/20 focus:border-amber-300 outline-none"
+          />
 
-            {/* PHONE */}
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-              placeholder="Phone Number"
-              className="w-full px-4 py-3 rounded-lg bg-dark-purple/50 border border-purple-light/30"
-            />
-
-            {/* EMAIL */}
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              placeholder="Email"
-              className="w-full px-4 py-3 rounded-lg bg-dark-purple/50 border border-purple-light/30"
-            />
-
-            {/* EVENT DROPDOWN — FIXED */}
-            <select
-              name="event"
-              value={formData.event}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 rounded-lg bg-purple-700 border border-purple-light/30"
-            >
-
-              <option value="">Choose Event</option>
-
-              {eventsData
-                .filter(e => ["Technical"].includes(e.category))
-                .map(e => (
-                  <option key={e.id} value={e.title}>
-                    {e.title}
-                  </option>
+          {/* EVENT SELECT (IMPORTANT FIX) */}
+          <select
+            name="event"
+            value={formData.event}
+            onChange={handleChange}
+            required
+            className="w-full p-2.5 text-sm rounded-md bg-white/10 border border-white/20 focus:border-amber-300 outline-none"
+          >
+            <option value="">Select Technical Event</option>
+            {events
+              .filter(e => e.category === "Technical")
+              .map((e) => (
+                <option key={e._id} value={e.title}>
+                  {e.title}
+                </option>
               ))}
+          </select>
 
-            </select>
+          {/* TEAM DETAILS */}
+          <input
+            type="text"
+            name="teamName"
+            placeholder="Team Name (optional)"
+            value={formData.teamName}
+            onChange={handleChange}
+            className="w-full p-2.5 text-sm rounded-md bg-white/10 border border-white/20 focus:border-amber-300 outline-none"
+          />
 
-            {/* CATEGORY DROPDOWN — FIXED CONTROLLED */}
-            <select
-              name="eventCategory"
-              value={formData.eventCategory}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 rounded-lg bg-purple-700 border border-purple-light/30"
-            >
-              <option value="">Choose Category</option>
-              <option value="Technical">Technical</option>
-              
-            </select>
+          <input
+            type="text"
+            name="teamMembers"
+            placeholder="Team Members (comma separated)"
+            value={formData.teamMembers}
+            onChange={handleChange}
+            className="w-full p-2.5 text-sm rounded-md bg-white/10 border border-white/20 focus:border-amber-300 outline-none"
+          />
 
-            {/* TEAM */}
-            <input
-              type="text"
-              name="teamName"
-              value={formData.teamName}
-              onChange={handleChange}
-              placeholder="Team lead name (optional for single participant events)"
-              className="w-full px-4 py-3 rounded-lg bg-dark-purple/50 border border-purple-light/30"
-            />
+          <button
+            type="submit"
+            disabled={submitting}
+            className="w-full mt-2 bg-amber-300 text-gray-900 text-sm font-semibold py-2.5 rounded-md hover:bg-amber-400 transition"
+          >
+            {submitting ? "Registering..." : "Register"}
+          </button>
 
-            <textarea
-              name="teamMembers"
-              value={formData.teamMembers}
-              onChange={handleChange}
-              placeholder="Team Members names, optional for single participant events"
-              rows="3"
-              className="w-full px-4 py-3 rounded-lg bg-dark-purple/50 border border-purple-light/30"
-            />
+        </form>
 
-            <button
-              type="submit"
-              className="w-full btn-primary py-3 font-semibold text-lg"
-            >
-              Register Now
-            </button>
+        {message && (
+          <p className="mt-3 text-center text-xs text-gray-300">
+            {message}
+          </p>
+        )}
 
-            <p>Please make sure you have read the entry fee details before registering.</p>
-
-          </form>
-
-          )}
-
-        </div>
-      </section>
-
+      </div>
     </div>
   );
 }
