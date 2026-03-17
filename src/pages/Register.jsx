@@ -145,24 +145,24 @@ export default function Register() {
           />
 
           {/* EVENT SELECT (IMPORTANT FIX) */}
-          <select
-            name="event"
-            value={formData.event}
-            onChange={handleChange}
-            required
-            className="w-full p-2.5 text-sm rounded-md bg-white/10 border border-white/20 focus:border-amber-300 outline-none"
-          >
-            <option value="">Select Technical Event</option>
-            {events
-              .filter(e => e.category === "Technical")
-              .map((e) => (
-                <option key={e._id} value={e.title}>
-                  {e.title}
-                </option>
-              ))}
-          </select>
+                <select
+                name="event"
+                value={formData.event}
+                onChange={handleChange}
+                required
+                className="w-full p-2.5 text-sm rounded-md bg-white/10 border border-white/20 focus:border-amber-300 outline-none text-white"
+                >
+                <option value="" className="bg-gray-900 text-white">Select Technical Event</option>
+                {events
+                  .filter(e => e.category === "Technical")
+                  .map((e) => (
+                  <option key={e._id} value={e.title} className="bg-gray-900 text-white">
+                    {e.title}
+                  </option>
+                  ))}
+                </select>
 
-          {/* TEAM DETAILS */}
+                {/* TEAM DETAILS */}
           <input
             type="text"
             name="teamName"
