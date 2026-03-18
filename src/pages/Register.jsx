@@ -196,7 +196,8 @@ export default function Register() {
             />
           </div>
           <p className="text-xs text-gray-300 text-center mb-2">Scan to pay entry fees</p>
-          <p className="text-xs text-gray-400 text-center">pay through the mobile no. : 7569207359</p>
+          <p className="text-xs text-gray-400 text-center"> or pay through the mobile no. : 7569207359</p>
+          <p className="text-xs text-gray-300 text-center mb-2">send the screen shot after the payment to 7569207359 in whatsapp. </p>
         </div>
 
           <button
