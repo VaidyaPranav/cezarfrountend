@@ -30,7 +30,7 @@ function App() {
         <Layout>
           <Routes>
 
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/events" element={<Events />} />
             <Route path="/events/:id" element={<EventDetails />} />
             <Route path="/register" element={<Register />} />
@@ -45,7 +45,7 @@ function App() {
             <Route path="/admin/posts" element={<AdminPosts />} />
             <Route path="/admin/events" element={<AdminEvents />} />
 
-            <Route path="/" element={<About />} />
+            <Route path="/home" element={<About />} />
 
             {/* Nested Admin */}
             <Route
