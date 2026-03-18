@@ -4,7 +4,43 @@ import TournamentBracket from "../components/TournamentBracket";
 
 
 export default function EventDetails() {
+const renderDescription = (text) => {
+  if (!text) return null;
 
+  const lines = text.split("\n").filter(l => l.trim() !== "");
+
+  return lines.map((line, i) => {
+
+    // HEADINGS
+    if (line.toUpperCase().includes("ENTRY FEE") ||
+        line.toUpperCase().includes("PRIZE") ||
+        line.toUpperCase().includes("ROUNDS") ||
+        line.toUpperCase().includes("HIGHLIGHTS")) {
+
+      return (
+        <h3 key={i} className="text-amber-300 font-bold mt-6 mb-2 uppercase">
+          {line}
+        </h3>
+      );
+    }
+
+    // BULLET POINTS
+    if (line.startsWith("-") || line.startsWith("•")) {
+      return (
+        <li key={i} className="ml-4 list-disc text-gray-300">
+          {line.replace(/^[-•]\s*/, "")}
+        </li>
+      );
+    }
+
+    // NORMAL TEXT
+    return (
+      <p key={i} className="text-gray-300 mb-2">
+        {line}
+      </p>
+    );
+  });
+};
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -95,20 +131,14 @@ export default function EventDetails() {
 
               {/* DESCRIPTION */}
               <div className="mb-10">
-                <h2 className="font-poppins font-bold text-2xl sm:text-3xl mb-4">
-                  About This Event
-                </h2>
+  <h2 className="font-poppins font-bold text-2xl sm:text-3xl mb-4">
+    About This Event
+  </h2>
 
-                <p className="font-inter text-gray-300 leading-relaxed text-base sm:text-lg">
-                  {event.description}
-                </p>
-
-                {event.points && (
-                  <p className="font-inter text-gray-300 text-base sm:text-lg mt-4">
-                    Points: {event.points}
-                  </p>
-                )}
-              </div>
+  <div className="space-y-1">
+    {renderDescription(event.description)}
+  </div>
+</div>
 
               {/* SPORTS BRACKET */}
               {event.category === "Sports" && event.teams?.length > 0 && (
