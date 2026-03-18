@@ -170,14 +170,17 @@ export default function EventDetails() {
                     <p className="text-gray-300 font-semibold">{event.date}</p>
                   </div>
 
-                  <div className="border-t border-purple-light/20 pt-6">
-                    <Link
-                      to="/register"
-                      className="btn-primary w-full block text-center py-3 text-lg font-semibold"
-                    >
-                      Register Now
-                    </Link>
-                  </div>
+                 <div className="border-t border-purple-light/20 pt-6">
+  {event.category === "Technical" && (
+    <Link
+      to="/register"
+      className="btn-primary w-full block text-center py-3 text-lg font-semibold"
+    >
+      Register Now
+    </Link>
+  )}
+</div>
+
 
                 </div>
               )}
