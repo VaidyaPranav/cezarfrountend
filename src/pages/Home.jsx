@@ -85,7 +85,7 @@ export default function Home() {
                       />
                     </a>
                   </div>
-                  <span className="mt-3 text-sm font-semibold text-white/80 tracking-wide group-hover:text-amber-400 transition">Clyra</span>
+                  <span className="mt-3 text-sm font-semibold text-white/80 tracking-wide group-hover:text-amber-400 transition">CLYRA</span>
                 </div>
                 {/* Sponsor 2 */}
                 <div className="flex flex-col items-center group">
@@ -98,7 +98,7 @@ export default function Home() {
                       />
                     </a>
                   </div>
-                  <span className="mt-3 text-sm font-semibold text-white/80 tracking-wide group-hover:text-amber-400 transition">Rohela Tech</span>
+                  <span className="mt-3 text-sm font-semibold text-white/80 tracking-wide group-hover:text-amber-400 transition">ROHELA TECH</span>
                 </div>
                 {/* Sponsor 3 */}
                 <div className="flex flex-col items-center group">
@@ -112,6 +112,18 @@ export default function Home() {
                     </a>
                   </div>
                   <span className="mt-3 text-sm font-semibold text-white/80 tracking-wide group-hover:text-amber-400 transition">SBI</span>
+                </div>
+                <div className="flex flex-col items-center group">
+                  <div className="bg-linear-to-br from-blue-300 via-indigo-400 to-purple-700 p-1 rounded-full shadow-lg transition-all group-hover:scale-105 group-hover:shadow-2xl">
+                    <a href="https://www.shlokanidhi.org/" target="_blank" rel="noopener noreferrer">
+                      <img 
+                        src="/shlokanidhi.jpeg"
+                        alt="Sponsor 3"
+                        className="h-20 w-20 object-contain rounded-full border-4 border-white shadow-md transition-transform group-hover:scale-110"
+                      />
+                    </a>
+                  </div>
+                  <span className="mt-3 text-sm font-semibold text-white/80 tracking-wide group-hover:text-amber-400 transition">SHLOKA NIDHI</span>
                 </div>
               </div>
             </div>
